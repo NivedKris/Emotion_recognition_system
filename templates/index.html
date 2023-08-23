@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Real-time Emotion Detection</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #000;
+            color: #FFF;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+            box-sizing: border-box;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fade-in 1s ease-in-out forwards;
+          
+        }
+
+        .razer-logo {
+            font-size: 42px;
+            color: #00FF00;
+            margin: 10px 0;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .overview {
+            font-size: 18px;
+            color: #00FF00;
+            line-height: 1.8;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #00FF00;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fade-in 1s ease-in-out 1s forwards;
+        }
+
+        h1,
+        h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color:#FFF;
+        }
+
+        .sci-fi-text {
+            font-size: 24px;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+        @keyframes background-shift {
+            0% {
+                background-color: #000;
+            }
+            100% {
+                background-color: rgba(0, 255, 0, 0.5); /* Razer green color with opacity 0.5 */
+            }
+        }
+        #video-feed {
+            max-width: 100%;
+            width: auto;
+            height: auto;
+            display: block;
+            object-fit: contain;
+            margin: 20px auto;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fade-in 1s ease-in-out 2s forwards;
+        }
+
+        @keyframes fade-in {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="razer-logo">razr</div>
+    </div>
+    <div class="container">
+        <div class="overview">
+            <h2 class="sci-fi-text">Overview</h2>
+            <p>Welcome to our real-time emotion detection system! Our system uses advanced facial recognition technology
+                to analyze facial expressions and determine emotions such as happiness, sadness, anger, and more.
+                Whether you're curious about the technology or simply interested in seeing emotions detected in real
+                time, you're in the right place!</p>
+        </div>
+    </div>
+    <div class="container">
+        <h1>Real-time Emotion Detection</h1>
+    </div>
+    <div class="container">
+        <img id="video-feed" src="{{ url_for('video_feed') }}" alt="Video Feed">
+    </div>
+</body>
+
+</html>
