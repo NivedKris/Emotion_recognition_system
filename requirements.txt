@@ -1,7 +1,7 @@
-Flask==2.2.2
+Flask
 tensorflow
-opencv-python==4.7.0
-opencv-contrib-python==4.7.0
-numpy==1.23.4
-fer==22.5.1
+opencv-python
+opencv-contrib-python
+numpy
+fer
 
