@@ -1,5 +1,6 @@
 from flask import Flask, render_template, Response
 import cv2
+from pathlib import Path
 from fer import FER
 
 app = Flask(__name__)
