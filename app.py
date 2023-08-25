@@ -7,7 +7,7 @@ app = Flask(__name__)
 detector = FER()
 
 def generate_frames():
-    cap = cv2.VideoCapture(0)
+    cap = cv2.VideoCapture(1)
     while True:
         ret, frame = cap.read()
         if not ret:
